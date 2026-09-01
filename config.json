@@ -1,18 +1,69 @@
+
 {
-    "name": "ServerName",
+
+    "name": "KOCity-GCP-Server",
+
     "authServer": "https://api.kocity.xyz",
-    "publicAddr": "127.0.0.1:23600",
-    "maxPlayers": 50,
-    "external": {
-        "port": 23600
+
+    "publicAddr": "35.190.176.9:23700",
+
+    "external": {"port": 23700},
+
+    "internal": {"host": "127.0.0.1", "port": 23500},
+
+    "redis": {"host": "127.0.0.1", "port": 6380},
+
+    "postgres": "postgres://viper:viper@127.0.0.1:5434/viper",
+
+    "statsWatcher": {
+
+        "enabled": true,
+
+        "gameDbUrl": "postgres://viper:viper@127.0.0.1:5434/viper",
+
+        "pollIntervalMs": 2000
+
     },
-    "internal": {
-        "host": "127.0.0.1",
-        "port": 23500
+
+    "trophy": {
+
+        "enabled": true,
+
+        "url": "https://trophy-backend.vercel.app/api/kocity",
+
+        "gameSlug": "knockout-city",
+
+	"secret": "Th3_Br1dg3_2026"
+
     },
-    "redis": {
-        "host": "127.0.0.1",
-        "port": 6380
+
+    "metarena": {
+
+        "enabled": true,
+
+        "url": "https://metarena-api.vercel.app/api/kocity",
+
+        "serverId": "gcp-us-east1",
+
+	"secret": "Th3_Br1dg3_2026"
+
     },
-    "postgres": "postgres://viper:@127.0.0.1:5434/viper"
+
+    "trainingGoals": {
+
+        "enabled": true,
+
+        "supabaseUrl": "https://nwiijfedhejobamphvxe.supabase.co",
+
+        "supabaseServiceKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im53aWlqZmVkaGVqb2JhbXBodnhlIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NDIxMjgzNCwiZXhwIjoyMDc5Nzg4ODM0fQ.kpME6s7f0SzQA-Arc4KGbvpLPvQTNInaFp3N9e89F5g"
+
+    },
+
+    "engagement": {
+
+        "enabled": true
+
+    }
+
 }
+
